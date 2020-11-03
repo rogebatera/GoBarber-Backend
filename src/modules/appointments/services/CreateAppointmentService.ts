@@ -1,8 +1,9 @@
-import Appointment from '../models/Appointment';
+import Appointment from '@modules/appointments/infra/typeorm/entities/Appointment';
+import AppointmentsRepository from '@modules/appointments/infra/typeorm/repositories/AppointentsRepository';
+import AppError from '@shared/Error/AppError';
+
 import { startOfHour } from 'date-fns';
-import AppointmentsRepository from '../repositories/AppointentsRepository';
 import { getCustomRepository } from 'typeorm';
-import AppError from '../Error/AppError';
 
 /**
  * NOS SERVICES É ONDE FICA A REGRA DE NEGOCIO 
