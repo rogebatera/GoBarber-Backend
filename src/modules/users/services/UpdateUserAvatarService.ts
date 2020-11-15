@@ -18,7 +18,7 @@ class UpdateUserAvatarService {
 
     constructor(
         @inject('UsersRepository')
-        private usersRepository: IUsersRepository
+        private usersRepository: IUsersRepository,
     ){}
 
     public async execute({user_id, avatarFilename}:IRequest):Promise<User>{
